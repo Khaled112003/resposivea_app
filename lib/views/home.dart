@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:resposivea_app/views/widgets/drawer.dart';
+import 'package:resposivea_app/views/widgets/home_body.dart';
 
-import 'package:resposivea_app/views/widgets/item1.dart';
-import 'package:resposivea_app/views/widgets/item2.dart';
+
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -23,21 +23,16 @@ GlobalKey <ScaffoldState> scaffoldkey=GlobalKey();
       appBar: AppBar(
         backgroundColor: Colors.black,
         leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              scaffoldkey.currentState!.openDrawer();
+            },
             icon:const Icon(
               Icons.menu,
               color: Colors.white,
             )),
       ),
-      body:const Padding(
-        padding:  EdgeInsets.all(8.0),
-        child:  CustomScrollView(slivers: [
-          CustomItem1(),
-          CustomItem2()
-        
-        ],),
-      )
+      body: 
+     const HomeViewBody()
     );
   }
 }
-

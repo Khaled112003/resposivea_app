@@ -1,18 +1,29 @@
 import 'package:flutter/material.dart';
 
-class CustomItem1 extends StatelessWidget {
-  const CustomItem1({super.key});
+class MobileCustomItem extends StatelessWidget {
+  const MobileCustomItem({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SliverGrid.builder(itemCount: 4,
       gridDelegate:
          const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2 ,crossAxisSpacing: 5,mainAxisSpacing: 15),
-      itemBuilder: (context, index) => Container(
-        decoration: const BoxDecoration(
-            color: Colors.grey,
-            borderRadius: BorderRadius.all(Radius.circular(12))),
-      ),
+      itemBuilder: (context, index) => WidgetItem(),
+    );
+  }
+}
+
+class WidgetItem extends StatelessWidget {
+  const WidgetItem({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: const BoxDecoration(
+          color: Colors.grey,
+          borderRadius: BorderRadius.all(Radius.circular(12))),
     );
   }
 }
