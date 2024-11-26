@@ -10,7 +10,7 @@ class CustomDrawerItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: ListTile(leading: Icon(drawermodel.icon ,size: 30,), title: 
-        Text(drawermodel.text ,style:const TextStyle(fontSize: 20),),
+        FittedBox(fit: BoxFit.scaleDown,alignment: Alignment.centerLeft, child: Text(drawermodel.text ,style:const TextStyle(fontSize: 20),)),
         )
     );
   }

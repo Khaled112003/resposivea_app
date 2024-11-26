@@ -18,9 +18,9 @@ GlobalKey <ScaffoldState> scaffoldkey=GlobalKey();
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldkey,
-      drawer: CustomDrawer(),
+      drawer:const CustomDrawer(),
       backgroundColor: const Color.fromARGB(255, 203, 197, 197),
-      appBar: AppBar(
+      appBar:MediaQuery.sizeOf(context).width<900? AppBar(
         backgroundColor: Colors.black,
         leading: IconButton(
             onPressed: () {
@@ -30,7 +30,7 @@ GlobalKey <ScaffoldState> scaffoldkey=GlobalKey();
               Icons.menu,
               color: Colors.white,
             )),
-      ),
+      ):null,
       body: 
      const HomeViewBody()
     );

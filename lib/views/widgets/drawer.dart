@@ -12,7 +12,7 @@ class CustomDrawer extends StatefulWidget {
 
 class _CustomDrawerState extends State<CustomDrawer> {
   List<DrawerModel>drawerList= [
-   DrawerModel(icon: Icons.home, text: 'Home'),
+   DrawerModel(icon: Icons.home, text: 'H  o  m  e  '),
    DrawerModel(icon: Icons.settings, text: 'Setting'),
    DrawerModel(icon: Icons.logout, text: 'login'),
   ];

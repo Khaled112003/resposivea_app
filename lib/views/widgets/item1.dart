@@ -15,15 +15,16 @@ class MobileCustomItem extends StatelessWidget {
 
 class WidgetItem extends StatelessWidget {
   const WidgetItem({
-    super.key,
+    super.key, this.color,
   });
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-          color: Colors.grey,
-          borderRadius: BorderRadius.all(Radius.circular(12))),
+      decoration:  BoxDecoration(
+          color:color?? Colors.grey,
+          borderRadius:const BorderRadius.all(Radius.circular(12))),
     );
   }
 }
