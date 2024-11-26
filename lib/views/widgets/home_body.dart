@@ -1,6 +1,5 @@
-
-
 import 'package:flutter/material.dart';
+import 'package:resposivea_app/views/widgets/adaptive_ui.dart';
 import 'package:resposivea_app/views/widgets/desktop_layout.dart';
 
 import 'package:resposivea_app/views/widgets/mobile_layout.dart';
@@ -13,17 +12,10 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, constraints) {
-      if(constraints.maxWidth <600){
-      return const MobileLayout();}
-      else if(constraints.maxWidth <900){
-        return const TabletLayout();
-      }else{
-        return const DesktopLayout();
-      }
-    },);
+    return AdaptiveUi(
+      mobile: (context) => const MobileLayout(),
+      tablet: (context) => const TabletLayout(),
+      desktop: (context) => const DesktopLayout(),
+    );
   }
 }
-
-
-
